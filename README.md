@@ -1,5 +1,4 @@
 
-  - [*To the reader*](#to-the-reader)
   - [Part 0. Proposal](#part-0-proposal)
   - [Part I. Work out functionality ✅](#part-i-work-out-functionality-)
       - [Try it out](#try-it-out)
@@ -20,30 +19,18 @@
       - [`devtools::check()` report](#devtoolscheck-report)
       - [Package directory file tree](#package-directory-file-tree)
 
-# *To the reader*
+<!-- badges: start -->
 
-Welcome to the R package building helper *readme2pkg.template*\!
-
-Below, is a readme that provides steps for building a package. This
-readme acts as a worksheet, checklist, and control document as functions
-used in package building are included within.
-
-We’ll use the `{readme2pkg}` helper package to send code chunks to
-different directories in the package.
-
-To install `{readme2pkg}`:
-
-``` 
-
-remotes::install.github("EvaMaeRey/readme2pkg")
-```
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
 
 # Part 0. Proposal
 
-Proposing the {xxxx} package\! 🦄
+Proposing the {r2pmarch20test} package\! 🦄
 <!-- (typical package introduction write up; but actually aspirational) -->
 
-The goal of {xxxx} is to make … easier.
+The goal of {r2pmarch20test} is to make … easier.
 
 Without the package, we live in the effort-ful world that follows 🏋:
 
@@ -54,16 +41,16 @@ x <- 4
 #> [1] 8
 ```
 
-With the {xxxx} package, we’ll live in a different world (🦄 🦄 🦄) where
-the task is a snap 🫰:
+With the {r2pmarch20test} package, we’ll live in a different world (🦄 🦄
+🦄) where the task is a snap 🫰:
 
 Proposed API:
 
 ``` 
 
-library(xxxxx)
+library(r2pmarch20test)
 
-xxxxx::times_two(x = 4)
+r2pmarch20test::times_two(x = 4)
 ```
 
 # Part I. Work out functionality ✅
@@ -112,13 +99,14 @@ Use new {readme2pkg} function to do this from readme…
 readme2pkg::chunk_to_r(chunk_name = "times_two")
 ```
 
-### Bit D. Run [`devtools::check()`](https://r-pkgs.org/whole-game.html#check) and address errors. 🚧 ✅
+### Bit D. Run [`devtools::check()`](https://r-pkgs.org/whole-game.html#check) and address all *errors.* 🚧 ✅
 
 ``` r
 devtools::check(pkg = ".")
 ```
 
-devtools check will document the functions for you.
+devtools::check() will document the functions for you once exported;
+check the ‘man’ folder.
 
 ### Bit E. [Install](https://r-pkgs.org/whole-game.html#install) and restart package 🚧 ✅
 
@@ -128,19 +116,19 @@ devtools::install(pkg = ".")
 
 ### Bit F. Write traditional README that uses built package (also serves as a test of build). 🚧 ✅
 
-The goal of the {xxxx} package is to …
+The goal of the {r2pmarch20test} package is to …
 
 Install package with:
 
-    remotes::installgithub("GithubCoolUser/mypacakge")
+    remotes::installgithub("EvaMaeRey/r2pmarch20test")
 
 Once functions are exported you can remove go to two colons, and when
 things are are really finalized, then go without colons (and rearrange
 your readme…)
 
 ``` r
-library(mypackage)  ##<< change to your package name here
-mypackage:::times_two(10)
+library(r2pmarch20test)  ##<< change to your package name here
+r2pmarch20test:::times_two(10)
 ```
 
 ### Bit G. Add [lifecycle badge](https://r-pkgs.org/lifecycle.html) (experimental) 🚧 ✅
@@ -150,6 +138,14 @@ usethis::use_lifecycle_badge("experimental")
 ```
 
 ### Bit H. Push to github.
+
+In RStudio: Console/Terminal/Job pane
+
+Chose terminal tab. Then
+
+  - git add .
+  - git commit -m “first commit”
+  - git push
 
 ## Phase 2: Listen & iterate 🚧 ✅
 
@@ -242,7 +238,12 @@ devtools::check(pkg = ".")
 ``` r
 fs::dir_tree(recurse = T)
 #> .
+#> ├── DESCRIPTION
+#> ├── NAMESPACE
+#> ├── R
+#> │   └── times_two.R
 #> ├── README.Rmd
 #> ├── README.md
-#> └── readme2pkg.template.Rproj
+#> ├── man
+#> └── r2pmarch20test.Rproj
 ```

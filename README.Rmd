@@ -14,21 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# *To the reader* 
-
-Welcome to the R package building helper *readme2pkg.template*!
-
-Below, is a readme that provides steps for building a package.  This readme acts as a worksheet, checklist, and control document as functions used in package building are included within.  
-
-We'll use the `{readme2pkg}` helper package to send code chunks to different directories in the package.  
-
-To install `{readme2pkg}`:
-
-```
-
-remotes::install.github("EvaMaeRey/readme2pkg")
-
-```
+<!-- badges: start -->
+  [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->  
 
 # Part 0. Proposal
 
@@ -131,19 +119,19 @@ devtools::install(pkg = ".")
 
 ### Bit F. Write traditional README that uses built package (also serves as a test of build). 🚧 ✅ 
 
-The goal of the {xxxx} package is to ...
+The goal of the {r2pmarch20test} package is to ...
 
 Install package with:
 
 ```
-remotes::installgithub("GithubCoolUser/mypacakge")
+remotes::installgithub("EvaMaeRey/r2pmarch20test")
 ```
 
 Once functions are exported you can remove go to two colons, and when things are are really finalized, then go without colons (and rearrange your readme...)
 
 ```{r, eval = F}
-library(mypackage)  ##<< change to your package name here
-mypackage:::times_two(10)
+library(r2pmarch20test)  ##<< change to your package name here
+r2pmarch20test:::times_two(10)
 ```
 
 
@@ -157,8 +145,13 @@ usethis::use_lifecycle_badge("experimental")
 
 ### Bit H. Push to github.
 
+In RStudio: Console/Terminal/Job pane
 
+Chose terminal tab.  Then 
 
+- git add . 
+- git commit -m "first commit" 
+- git push
 
 ## Phase 2: Listen & iterate 🚧 ✅
 
