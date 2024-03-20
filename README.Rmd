@@ -32,10 +32,10 @@ remotes::install.github("EvaMaeRey/readme2pkg")
 
 # Part 0. Proposal
 
-Proposing the {xxxx} package! 🦄 
+Proposing the {r2pmarch20test} package! 🦄 
 <!-- (typical package introduction write up; but actually aspirational) -->
 
-The goal of {xxxx} is to make ... easier.
+The goal of {r2pmarch20test} is to make ... easier.
 
 
 Without the package, we live in the effort-ful world that follows 🏋:
@@ -48,15 +48,15 @@ x <- 4
 ```
 
   
-With the {xxxx} package, we'll live in a different world (🦄 🦄 🦄) where the task is a snap 🫰: 
+With the {r2pmarch20test} package, we'll live in a different world (🦄 🦄 🦄) where the task is a snap 🫰: 
 
 Proposed API:
 
 ```
 
-library(xxxxx)
+library(r2pmarch20test)
 
-xxxxx::times_two(x = 4)
+r2pmarch20test::times_two(x = 4)
 
 ```
 
@@ -114,13 +114,13 @@ readme2pkg::chunk_to_r(chunk_name = "times_two")
 
 
 
-### Bit D. Run [`devtools::check()`](https://r-pkgs.org/whole-game.html#check) and address errors. 🚧 ✅
+### Bit D. Run [`devtools::check()`](https://r-pkgs.org/whole-game.html#check) and address all *errors.* 🚧 ✅
 
 ```{r, eval = F}
 devtools::check(pkg = ".")
 ```
 
-devtools check will document the functions for you. 
+devtools::check() will document the functions for you once exported; check the 'man' folder.  
 
 ### Bit E. [Install](https://r-pkgs.org/whole-game.html#install) and restart package 🚧 ✅
 
